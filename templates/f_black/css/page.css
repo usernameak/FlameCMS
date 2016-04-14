@@ -1,0 +1,46 @@
+body
+{
+	background:linear-gradient(-45deg, rgba(0,0,0,1) 0%,rgba(65,63,64,1) 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.left-block
+{
+	float: left;
+}
+
+.logo-img
+{
+	border: 2px solid #fff;
+	border-radius: 150px;
+	box-shadow: 0px 0px 17px #fff;
+	padding: 0px;
+	margin: 0px;	
+}
+
+.line-g
+{
+	margin-top: 15px;
+	border: 1px solid #000;
+	box-shadow: 0px 0px 5px #000000;
+}
+
+.logo-text
+{
+	color: white;
+	font-size: 20px;
+	padding-left: 5px;
+}
+
+.logo-desc
+{
+	color: #eee;
+	font-size: 15px;
+}
+
+.wrapper
+{
+	margin: auto;
+	width: 950px;
+}
