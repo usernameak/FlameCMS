@@ -10,6 +10,5 @@
 	include("modules/menu.php");
 	$menu = menu();
 	
-	include("config.php");
 	include("templates/$template/index.html");
 ?>
