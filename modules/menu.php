@@ -1,12 +1,17 @@
-﻿<?
+<?
 function menu()
-{
-	$href[0] = "#";
-	$link[0] = "Главная";
-	$href[1] = "#";
-	$link[1] = "Лол";
+{	
+	$file_array =  file("resourses/menu.txt");
+	$num_str = count($file_array); 
 	
-	include("modules/templates.php");
+	for($i = 0; $i < $num_str; $i ++)
+	{
+		$kek = explode("|", $file_array[$i]);
+		$href[$i] = $kek[0];
+		$link[$i] = $kek[1];
+	}
+	
+	include("config.php");
 	$sm_read = file_get_contents("templates/".$template."/menu.html");
 	
 	for($i = 0; isset($href[$i]); $i++)

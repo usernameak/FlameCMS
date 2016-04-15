@@ -21,8 +21,10 @@ body {
     flex-grow: 1;
 }
 aside {
-    width: 250px;
+	width: 1000 0px;
+    padding: 0px;
     background: #D2D7D3;
+	min-width: 200px;
 }
 #main {
     flex-grow: 1;
@@ -33,11 +35,24 @@ aside {
 .news_item {
     margin: 5px 0;
     background: #EEEEEE;
+	margin-bottom: 50px;
 }
+
 .news_info, .news_title {
     background: #BDC3C7;
     padding: 5px;
+	text-decoration: none;
+	color: #000;
 }
+
+.news_title:hover {
+    background: #B8C2C0;
+}
+
+.news_title:active {
+    background: #B2BCBC;
+}
+
 .news_text {
     padding: 5px;
 }
@@ -79,4 +94,13 @@ footer {
 .menu_item_a {
     text-decoration: none;
     color: black;
+}
+
+::selection {
+background: #3f6b8d;
+color: #b9cfdf;
+}
+::-moz-selection {
+background: #3f6b8d;
+color: #b9cfdf;
 }
