@@ -1,4 +1,6 @@
 ﻿<?
+	include("config.php");
+	
 	if($_GET['blog'])
 		$blog = $_GET['blog'];
 	if(!$blog)
