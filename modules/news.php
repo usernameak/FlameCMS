@@ -1,7 +1,6 @@
 <?
 	function index_page()
 	{
-		
 		include("config.php");
 		$sm_read = file_get_contents("templates/$template/news.html");
 
@@ -18,7 +17,7 @@
 			
 			preg_match_all("/\[b\](.*?)\[\/b\]/",$txt[$i - 1],$t);
 
-			$txt[$i - 1] = bbcode($txt[$i - 1]);
+			$txt[$i - 1] = bbcod($txt[$i - 1]);
 			
 			$author[$i - 1] = "Neongames";
 			
@@ -34,32 +33,33 @@
 		return $news;
 	}
 	
-	function bbcode($text) 
+	function bbcod($text) 
 	{
-		$str_search = array(
-			"#\[br\]#is",
-			"#\[b\](.+?)\[\/b\]#is",
-			"#\[i\](.+?)\[\/i\]#is",
-			"#\[s\](.+?)\[\/s\]#is",
-			"#\[u\](.+?)\[\/u\]#is",
-			"#\[url=(.+?)\](.+?)\[\/url\]#is",
-			"#\[img\](.+?)\[\/img\]#is",
-			"#\[size=(.+?)\](.+?)\[\/size\]#is",
-			"#\[color=(.+?)\](.+?)\[\/color\]#is",
-			"#\[h(1|2|3|4|5|6)\](.+?)\[\/h(1|2|3|4|5|6)\]#is"
-		);
-		$str_replace = array(
-			'<br>',
-			'<bold>\\1</bold>',
-			'<i>\\1</i>',
-			'<s>\\1</s>',
-			'<span style="text-decoration:underline">\\1</span>',
-			'<a href="\\1">\\2</a>',
-			'<img src="\\1">',
-			'<span style="font-size:\\1pt">\\2</span>',
-			'<span style="color:\\1">\\2</span>',
-			'<h\\1>\\2</h\\3>'
-		);
-		return preg_replace($str_search, $str_replace, $text);
+			$str_search = array(
+				"#\[br\]#is",
+				"#\[b\](.+?)\[\/b\]#is",
+				"#\[i\](.+?)\[\/i\]#is",
+				"#\[s\](.+?)\[\/s\]#is",
+				"#\[u\](.+?)\[\/u\]#is",
+				"#\[url=(.+?)\](.+?)\[\/url\]#is",
+				"#\[img\](.+?)\[\/img\]#is",
+				"#\[size=(.+?)\](.+?)\[\/size\]#is",
+				"#\[color=(.+?)\](.+?)\[\/color\]#is",
+				"#\[h(1|2|3|4|5|6)\](.+?)\[\/h(1|2|3|4|5|6)\]#is"
+			);
+			
+			$str_replace = array(
+				'<br>',
+				'<bold>\\1</bold>',
+				'<i>\\1</i>',
+				'<s>\\1</s>',
+				'<span style="text-decoration:underline">\\1</span>',
+				'<a href="\\1">\\2</a>',
+				'<img src="\\1">',
+				'<span style="font-size:\\1pt">\\2</span>',
+				'<span style="color:\\1">\\2</span>',
+				'<h\\1>\\2</h\\3>'
+			);
+			return preg_replace($str_search, $str_replace, $text);
 	}
 ?>

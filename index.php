@@ -11,6 +11,7 @@
 	{
 		if(isset($_GET['page']))
 		{
+			$menu = menu();
 			include("modules/pages.php");
 		}
 		
