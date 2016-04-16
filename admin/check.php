@@ -12,7 +12,11 @@
 	}
 	if($_GET["test"] == "1") {
 		if(md5($_POST["pass"]) == $pass) {
-			
+			setcookie("appass", $_POST["pass"], time()+60*60*24*365, "/admin/");
+		}
+	} else if($_GET["quit"] == "1") {
+		if(md5($_POST["pass"]) == $pass) {
+			setcookie("appass", "", -1, "/");
 		}
 	}
 ?>
