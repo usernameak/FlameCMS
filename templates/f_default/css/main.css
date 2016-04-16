@@ -43,6 +43,7 @@ aside {
     background: #C3C3C3;
     padding: 5px;
     color: #000;
+	cursor: pointer;
 }
 
 .news_title:hover, .news_info:hover 
@@ -111,7 +112,7 @@ footer {
 }
 .menu_item:active 
 {
-    background: #B2BCBC;
+    background: #BBB;
     align-items: center;
     justify-content: center;
 }
@@ -125,12 +126,16 @@ footer {
 }
 
 ::selection {
-background: #3f6b8d;
-color: #b9cfdf;
+color: #E9E9E9;
+background: #030303;
 }
 ::-moz-selection {
-background: #3f6b8d;
-color: #b9cfdf;
+color: #E9E9E9;
+background: #030303;
+}
+::-o-selection {
+color: #E9E9E9;
+background: #030303;
 }
 
 /*custom fonts - Bitter, Montserrat*/
