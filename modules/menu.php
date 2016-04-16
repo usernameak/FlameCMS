@@ -12,7 +12,7 @@ function menu()
 	}
 	
 	include("config.php");
-	$sm_read = file_get_contents("templates/".$template."/menu.html");
+	$sm_read = file_get_contents("templates/$template/menu.html");
 	
 	for($i = 0; isset($href[$i]); $i++)
 	{

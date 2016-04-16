@@ -1,2 +1,3 @@
-/|Главная
+http://neongames-sss.ru/|Главная
+?page=about|О нас
 https://vk.com/flamegames|Группа ВК
