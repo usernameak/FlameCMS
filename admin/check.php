@@ -10,5 +10,9 @@
 			die();
 		}
 	}
-	
+	if($_GET["test"] == "1") {
+		if(md5($_POST["pass"]) == $pass) {
+			
+		}
+	}
 ?>
