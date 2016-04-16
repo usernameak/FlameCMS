@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700italic,700&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic);
+
+html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #6C7A89;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background: #F1F1F1;
+    width: 75vw;
+}
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+aside {
+    padding: 5px;
+    background: #515151;
+    min-width: 250px;
+}
+#main {
+    flex-grow: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.news_item
+ {
+    margin: 5px 0;
+    background: #D9D9D9;
+    margin-bottom: 50px;
+}
+
+.news_info, .news_title 
+{
+    background: #C3C3C3;
+    padding: 5px;
+    color: #000;
+}
+
+.news_title:hover, .news_info:hover 
+{
+    background: #BBB;
+}
+
+.news_title:active {
+    background: #B1B1B1;
+}
+
+.news_text {
+    padding: 5px;
+}
+header {
+    height: 75px;
+    background: #ababab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background: #ababab;
+}
+#menu_title {
+    background: #BBB;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu_title:hover {
+    background: #B1B1B1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_item 
+{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background: white; border-top: 6px solid #B2B2B2;
+	width: 250px; margin: 0 auto;
+	margin-top:5px;
+}
+.menu_item:hover 
+{
+	display: flex;
+	margin-left:10px
+	text-decoration: none;
+	background: #EEE; border-top: 6px solid #B1B1B1;
+	cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.menu_item:active 
+{
+    background: #B2BCBC;
+    align-items: center;
+    justify-content: center;
+}
+.menu_item_a {
+    color: black;
+	list-style-type: none;
+	overflow: hidden;
+	text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+::selection {
+background: #3f6b8d;
+color: #b9cfdf;
+}
+::-moz-selection {
+background: #3f6b8d;
+color: #b9cfdf;
+}
+
+/*custom fonts - Bitter, Montserrat*/
+@import url('http://fonts.googleapis.com/css?family=Montserrat|Bitter');
+/*basic reset*/
+
+/*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+.ink {
+	display: block; position: absolute;
+	background: hsl(180, 40%, 80%);
+	border-radius: 100%;
+	transform: scale(0);
+}
+/*animation effect*/
+.ink.animate{animation: ripple 0.65s linear;}
+@keyframes ripple{
+	100%{opacity: 0; transform: scale(2.5);}
+}

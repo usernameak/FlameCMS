@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flame</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="templates/<?=$template?>/css/main.css">
+		<script src="http://thecodeplayer.com/u/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <div id="site_name">FlameCMS</div>
+        </header>
+        <div id="wrapper">
+            <aside>
+                <div id="menu_title">Меню</div>
+                <div id="menu">
+                    <?=$menu?>
+                </div>
+            </aside>
+            <div id="main">
+                <?=$news?>
+            </div>
+        </div>
+        <footer>&copy; Flame CMS 2016. <br /><i align="center"><?=$eng_version?></i></footer>
+    </body>
+</html>
