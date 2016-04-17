@@ -16,10 +16,10 @@
 	
 	<div id="login">
 		
-        <form action="javascript:void(0);" method="POST" action="/admin/check.php?test=1">
+        <form method="POST" action="/admin/check.php?test=1">
             <fieldset class="clearfix">
                 <p><span class="fontawesome-lock"></span>
-				<input type="password" name="pass" value="password"></p> <!-- JS because of IE support; better: placeholder="Password" -->
+				<input type="password" name="pass" placeholder="Password"></p>
                 <div><input type="submit" value="Login"></div>
             </fieldset>
         </form>
