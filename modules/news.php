@@ -17,7 +17,6 @@
 				$txt[$i] .= "\n $file_f[$j] ";	
 			}
 			
-			preg_match_all("/\[b\](.*?)\[\/b\]/",$txt[$i - 1],$t);
 
 			$txt[$i] = bbcodd($txt[$i]);
 			
@@ -27,7 +26,7 @@
 			$edd_tamp = str_replace("[_text]", $txt[$i], $edd_tamp);
 			$edd_tamp = str_replace("[_title]", $title[$i], $edd_tamp);
 			$edd_tamp = str_replace("[_cat]", $cats[$i], $edd_tamp);
-			$edd_tamp = str_replace("[_tags]", $tags[$i], $edd_tamp);
+			$edd_tamp = str_replace("[_desc]", $tags[$i], $edd_tamp);
 			$edd_tamp = str_replace("[_author]", $author[$i], $edd_tamp);
 			$edd_tamp = str_replace("[_date_b]", $date_b[$i], $edd_tamp);
 
