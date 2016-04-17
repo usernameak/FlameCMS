@@ -20,32 +20,16 @@
 
 			$txt[$i] = bbcodd($txt[$i]);
 			
-			$cat_t = file_get_contents("templates/$template/breadcrumbs.html");
-			$catm = str_replace("[_cat]", "Главная", $cat_t);
-			$cat_1 = str_replace("[_cat]", $file_f[3], $cat_t);
+			$bc = "Главная > " . $file_f[3];
 			$sub = $file_f[4];
 			$subs = $file_f[5];
-			
-			
-			if(!preg_match("/nul/", $sub))
-			{
-				$cat_2 = str_replace("[_cat]", $sub, $cat_t);
+			if(!preg_match("/nul/", $sub)) {
+				$bc .= " > " . $sub;
 			}
-			else
-			{
-				$cat_2 = str_replace("[_cat]", "", $cat_t);
+			if(!preg_match("/nul/", $subs)){
+				$bc .= " > " . $subs;
 			}
-			
-			if(!preg_match("/nul/", $subs))
-			{
-				$cat_3 = str_replace("[_cat]", $subs, $cat_t);
-			}
-			else
-			{
-				$cat_3 = str_replace("[_cat]", "", $cat_t);
-			}
-			
-			$cats[$i] = $catm.$cat_1.$cat_2.$cat_3;
+			$cats[$i] = $bc;
 			
 			$author[$i] = "Neongames";
 			
