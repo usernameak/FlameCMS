@@ -6,14 +6,28 @@
 <html>
 <head>
 	<title>Login - Admin panel - Flame CMS</title>
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 </head>
 <body>
-	<h1>Admin panel - Restricted Area</h1>
-	<form method="POST" action="/admin/check.php?test=1">
-		<div>Password: <input type="password" name="pass"></div>
-		<div><input type="submit" value="Login"></div>
-	</form>
+	
+	<header>
+		<h1>Admin panel - Restricted Area</h1>
+	</header>
+	
+	<div id="login">
+		
+        <form action="javascript:void(0);" method="POST" action="/admin/check.php?test=1">
+            <fieldset class="clearfix">
+                <p><span class="fontawesome-lock"></span>
+				<input type="password" name="pass" value="password"></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                <div><input type="submit" value="Login"></div>
+            </fieldset>
+        </form>
+    </div>
+	
 	<hr>
-	<p><em>Flame CMS v0.1a</em></p>
+	<footer>
+		<p><em>Flame CMS v0.1a</em></p>
+	</footer>
 </body>
 </html>
