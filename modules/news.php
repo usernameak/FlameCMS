@@ -27,7 +27,7 @@
 			$subs = $file_f[5];
 			
 			
-			if(preg_match("nul", $sub))
+			if(preg_match("/nul/", $sub))
 			{
 				$cat_2 = str_replace("[_cat]", $sub, $cat_t);
 			}
@@ -36,7 +36,7 @@
 				$cat_2 = str_replace("[_cat]", "", $cat_t);
 			}
 			
-			if(preg_match("nul", $subs))
+			if(preg_match("/nul/", $subs))
 			{
 				$cat_3 = str_replace("[_cat]", $subs, $cat_t);
 			}
