@@ -1,29 +1,29 @@
 <?
-	$page_id = 1;
+	$tpage_id = 1;
 	
-	function getpage($id)
+	function gettpage($id)
 	{
 		include("config.php");
 		
-		if(isset($_GET['page']) && $_GET['page'] == 'gal')
+		if(isset($_GET['tpage']))
 		{
-			$page = file("resourses/pages/$id.txt");
+			$tpage = file("resourses/pages/$id.txt");
 		}
 		
-		$txt = $page[1];
+		$txt = $tpage[1];
 		
-		for($j = 2; $j < count($page); $j ++)
+		for($j = 2; $j < count($tpage); $j ++)
 		{
-			$txt .= "$page[$j] ";	
+			$txt .= "$tpage[$j] ";
 		}
 		
 		$txt = bbcode1($txt);
 		
 		$page_content = file_get_contents("templates/$template/content.html");
-		$page_content = str_replace("[title]", $page[0], $page_content);
+		$page_content = str_replace("[title]", $tpage[0], $page_content);
 		$page_content = str_replace("[text]", $txt, $page_content);
 		
-		return $page_content;
+		return array($tpage[0], $page_content);
 	}
 	
 	function bbcode1($text) 
@@ -32,5 +32,14 @@
 		$search = $str_search;
 		$replace = $str_replace;
 		return preg_replace($str_search, $str_replace, $text);
+	}
+	
+	function getpage($title, $id, $menu, $content)
+	{
+		if(isset($_GET['page']))
+		{
+			include("config.php");
+			include("templates/$template/page.html");
+		}
 	}
 ?>
