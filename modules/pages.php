@@ -5,7 +5,10 @@
 	{
 		include("config.php");
 		
-		$page = file("resourses/pages/$id.txt");
+		if(isset($_GET['page']) && $_GET['page'] == 'gal')
+		{
+			$page = file("resourses/pages/$id.txt");
+		}
 		
 		$txt = $page[1];
 		

@@ -8,7 +8,7 @@ html {
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    min-height: 100vh;
+    min-height: 120vh;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -44,11 +44,18 @@ aside {
     padding: 5px;
     color: #000;
 	cursor: pointer;
+	-moz-transition: background-color 0.2s 0.02s ease;
+	-o-transition: background-color 0.2s 0.02s ease;
+	-webkit-transition: background-color 0.2s 0.02s ease;
+	text-transform: uppercase;
 }
 
 .news_title:hover, .news_info:hover 
 {
-    background: #BBB;
+    background: #AAA;
+	-moz-transition: background-color 0.2s 0.02s ease;
+	-o-transition: background-color 0.2s 0.02s ease;
+	-webkit-transition: background-color 0.2s 0.02s ease;
 }
 
 .news_title:active {
@@ -99,16 +106,32 @@ footer {
 	background: white; border-top: 6px solid #B2B2B2;
 	width: 250px; margin: 0 auto;
 	margin-top:5px;
+	-moz-transition: background-color 0.5s 0.05s ease;
+	-o-transition: background-color 0.5s 0.05s ease;
+	-webkit-transition: background-color 0.5s 0.05s ease;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
 }
 .menu_item:hover 
 {
 	display: flex;
 	margin-left:10px
 	text-decoration: none;
-	background: #EEE; border-top: 6px solid #B1B1B1;
+	background: #CCC; border-top: 6px solid #B1B1B1;
 	cursor: pointer;
     align-items: center;
     justify-content: center;
+	-moz-transition: background-color 0.5s 0.05s ease;
+	-o-transition: background-color 0.5s 0.05s ease;
+	-webkit-transition: background-color 0.5s 0.05s ease;
+	 -webkit-transform: translate(8px,0);
+	 -moz-transform: translate(8px,0);
+	 -o-transform: translate(8px,0);
+	 
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
 }
 .menu_item:active 
 {

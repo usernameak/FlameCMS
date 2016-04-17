@@ -7,7 +7,16 @@
 	include("modules/menu.php");
 	$menu = menu();
 	
-	if(!empty($_GET['page']))
+	include("modules/gallery.php");
+	$gallery = gal();
+	
+	if(isset($_GET['page']) && $_GET['page'] == 'gal')
+	{
+		$page_content = $gallery;
+		include("templates/$template/page.html");
+	}
+	
+	if(!empty($_GET['page']) || $_GET['page'] != 'main'|| $_GET['page'] != 'admin' || $_GET['page'] != 'gal')
 	{
 		if(isset($_GET['page']))
 		{
