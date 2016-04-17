@@ -1,0 +1,3 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule ^page/(\w*) /index.php?tpage=$1
