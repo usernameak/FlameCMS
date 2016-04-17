@@ -6,7 +6,7 @@
 
 		for($i = count(glob('resourses/news/*.*')); $i > 0; $i --)
 		{
-			$file_f = file("resourses/news/".$i.".txt");
+			$file_f = explode("\n", "resourses/news/".$i.".txt");
 			$title[$i] = $file_f[0];
 			$date_b[$i] = $file_f[1];
 			$desc[$i] = $file_f[2];
