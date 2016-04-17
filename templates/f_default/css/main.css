@@ -61,9 +61,9 @@ aside {
 .news_cat
 {
 	text-transform: none;
-	font-size: 8;
+	font-size: 14;
 	padding: 2px;
-	color: #AAA;
+	color: #000;
 	-moz-transition: color 0.2s 0.02s ease;
 	-o-transition: color 0.2s 0.02s ease;
 	-webkit-transition: color 0.2s 0.02s ease;
@@ -72,7 +72,7 @@ aside {
 .news_cat:hover
 {
 	text-transform: none;
-	font-size: 8;
+	font-size: 14;
 	padding: 2px;
 	color: #EEE;
 	-moz-transition: color 0.2s 0.02s ease;
