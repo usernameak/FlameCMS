@@ -20,9 +20,7 @@
 		}
 		header("Location: /admin/panel.php");
 	} else if($_GET["quit"] == "1") {
-		if(md5($_POST["pass"]) == $pass) {
-			setcookie("appass", "", -1, "/");
-		}
+		setcookie("appass", "", -1, "/");
 		header("Location: /admin/");
 	}
 ?>
