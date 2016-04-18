@@ -46,11 +46,6 @@ input {
 	padding: 0;
 	-webkit-appearance: none;
 }
-
-p {
-	line-height: 1.5em;
-}
-
 .clearfix { *zoom: 1; } /* For IE 6/7 */
 .clearfix:before, .clearfix:after {
 	display: table;
@@ -90,6 +85,27 @@ footer
     background: #ababab;
 	margin-bottom: 0px;
 }
+.button
+{
+	text-align: center;
+	margin: 50px;
+}
+
+.buttons
+{
+	margin: 0 auto;
+}
+
+.str
+{
+	margin-top: 50px;
+	margin-bottom:50px;
+	margin-left:10px;
+	margin-right:10px;
+	padding-left:0px;
+	padding-right:0px;
+	min-height: 80%;
+}
 
 /* ---------- LOGIN ---------- */
 
@@ -100,11 +116,10 @@ footer
 }
 
 #login form span {
-	background-color: #363b41;
+	background-color: #F1F1F1;
 	border-radius: 3px 0px 0px 3px;
 	-moz-border-radius: 3px 0px 0px 3px;
 	-webkit-border-radius: 3px 0px 0px 3px;
-	color: #606468;
 	display: block;
 	float: left;
 	height: 50px;

@@ -18,8 +18,9 @@
 		
         <form method="POST" action="/admin/check.php?test=1">
             <fieldset class="clearfix">
-                <p><span class="fontawesome-lock"></span>
-				<input type="password" name="pass" placeholder="Password"></p>
+                <p>
+				<input type="password" name="pass" placeholder="Password">
+				<span><img src="/admin/img/lock.png" width="48px" height="48px"/></span></p>
                 <div><input type="submit" value="Login"></div>
             </fieldset>
         </form>
