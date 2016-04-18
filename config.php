@@ -1,11 +1,4 @@
 <?
-	function get_site_url() {
-		return sprintf(
-			"%s://%s",
-			isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
-			$_SERVER['SERVER_NAME']
-		)
-	}
 	$jsonconfig = json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"]."/config.json"), true);
 	//////////////////////////////////////////////////////////////////////////////////
 	include("templates/templates.php");
@@ -44,4 +37,12 @@
 		'<h\\1>\\2</h\\3>',
 	);
 	//////////////////////////////////////////////////////////////////////////////////////
+	
+	function get_site_url() {
+		return sprintf(
+			"%s://%s",
+			isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+			$_SERVER['SERVER_NAME']
+		);
+	}
 ?>
