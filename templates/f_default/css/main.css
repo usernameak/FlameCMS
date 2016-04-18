@@ -40,7 +40,7 @@ aside {
 
 .news_title 
 {
-    background: #eb0c0c;
+    background: #C3C3C3;
     padding: 5px;
     color: #000;
 	cursor: pointer;
@@ -104,7 +104,7 @@ aside {
 {
 	color: #AAA;
 	padding-left: 10px;
-	color: #eb0c0c;
+	color: #C3C3C3;
 }
 
 .news_text {
@@ -128,7 +128,7 @@ footer {
 }
 #menu_title 
 {
-    background: #eb0c0c;
+    background: #C3C3C3;
     height: 50px;
     display: flex;
     align-items: center;
@@ -165,7 +165,7 @@ footer {
 	display: flex;
 	margin-left:10px
 	text-decoration: none;
-	background: #CCC; border-left: 6px solid #eb0c0c;
+	background: #CCC; border-left: 6px solid #C3C3C3;
 	cursor: pointer;
     align-items: center;
     justify-content: center;
