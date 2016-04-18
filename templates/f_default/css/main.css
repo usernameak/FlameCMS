@@ -34,13 +34,39 @@ aside {
 .news_item
  {
     margin: 5px 0;
-    background: #D9D9D9;
+    background: #F5F5F5;
     margin-bottom: 50px;
 }
 
-.news_info, .news_title 
+.news_title 
 {
-    background: #C3C3C3;
+    background: #eb0c0c;
+    padding: 5px;
+    color: #000;
+	cursor: pointer;
+	-moz-transition: background 0.2s 0.02s ease;
+	-o-transition: background 0.2s 0.02s ease;
+	-webkit-transition: background 0.2s 0.02s ease;
+	text-transform: uppercase;
+}
+
+.news_title:hover 
+{
+    background: #FF0B0B;
+	-moz-transition: background 0.2s 0.02s ease;
+	-o-transition: background 0.2s 0.02s ease;
+	-webkit-transition: background 0.2s 0.02s ease;
+}
+
+.news_title:active 
+{
+    background: #FFDEDE;
+}
+
+.news_info
+{
+	display: none;
+	background: #C3C3C3;
     padding: 5px;
     color: #000;
 	cursor: pointer;
@@ -50,13 +76,7 @@ aside {
 	text-transform: uppercase;
 }
 
-.news_title:hover, .news_info:hover 
-{
-    background: #AAA;
-	-moz-transition: background-color 0.2s 0.02s ease;
-	-o-transition: background-color 0.2s 0.02s ease;
-	-webkit-transition: background-color 0.2s 0.02s ease;
-}
+
 
 .news_cat
 {
@@ -83,10 +103,8 @@ aside {
 .news_tags
 {
 	color: #AAA;
-}
-
-.news_title:active {
-    background: #B1B1B1;
+	padding-left: 10px;
+	color: #eb0c0c;
 }
 
 .news_text {
@@ -108,15 +126,17 @@ footer {
     height: 50px;
     background: #ababab;
 }
-#menu_title {
-    background: #BBB;
+#menu_title 
+{
+    background: #eb0c0c;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#menu_title:hover {
+#menu_title:hover 
+{
     background: #B1B1B1;
     height: 50px;
     display: flex;
@@ -130,34 +150,31 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-	background: white; border-top: 6px solid #B2B2B2;
-	width: 250px; margin: 0 auto;
-	margin-top:5px;
+	background: white; border-left: 15px solid #fff;
+	width: 235px; margin: 0 auto;
+	margin-top:0px;
 	-moz-transition: background-color 0.5s 0.05s ease;
 	-o-transition: background-color 0.5s 0.05s ease;
 	-webkit-transition: background-color 0.5s 0.05s ease;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: border-left 0.5s 0.05s ease;
+	-o-transition: border-left 0.5s 0.05s ease;
+	-webkit-transition: border-left 0.5s 0.05s ease;
 }
 .menu_item:hover 
 {
 	display: flex;
 	margin-left:10px
 	text-decoration: none;
-	background: #CCC; border-top: 6px solid #B1B1B1;
+	background: #CCC; border-left: 6px solid #eb0c0c;
 	cursor: pointer;
     align-items: center;
     justify-content: center;
 	-moz-transition: background-color 0.5s 0.05s ease;
 	-o-transition: background-color 0.5s 0.05s ease;
 	-webkit-transition: background-color 0.5s 0.05s ease;
-	-webkit-transform: translate(8px,0);
-	-moz-transform: translate(8px,0);
-	-o-transform: translate(8px,0);
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: border-left 0.5s 0.05s ease;
+	-o-transition: border-left 0.5s 0.05s ease;
+	-webkit-transition: border-left 0.5s 0.05s ease;
 }
 .menu_item:active 
 {
