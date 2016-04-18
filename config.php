@@ -4,7 +4,11 @@
 	include("templates/templates.php");
 	$template = $jsonconfig["template"];
 	$page_title = $jsonconfig["sitename"];
-	$site_url = get_site_url();
+	$site_url = sprintf(
+			"%s://%s",
+			isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+			$_SERVER['SERVER_NAME']
+		);
 	//////////////////////////////////////////////////////////////////////////////////
 	$engine_version = "0.1";
 	//////////////////////////////////////////////////////////////////////////////////
@@ -37,12 +41,4 @@
 		'<h\\1>\\2</h\\3>',
 	);
 	//////////////////////////////////////////////////////////////////////////////////////
-	
-	function get_site_url() {
-		return sprintf(
-			"%s://%s",
-			isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
-			$_SERVER['SERVER_NAME']
-		);
-	}
 ?>
