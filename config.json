@@ -1,4 +1,5 @@
 {
 	"template": "f_default",
-	"sitename": "Flame Games"
+	"sitename": "Flame Games",
+	"siteurl" : "https//neongames.ru/"
 }
