@@ -8,12 +8,12 @@ html {
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    min-height: 120vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
     background: #F1F1F1;
-    width: 100vw;
+    width: 75vw;
 }
 #wrapper {
     display: flex;
