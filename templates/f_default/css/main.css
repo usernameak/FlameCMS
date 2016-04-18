@@ -52,7 +52,7 @@ aside {
 
 .news_title:hover 
 {
-    background: #FF0B0B;
+    background: #DADADA;
 	-moz-transition: background 0.2s 0.02s ease;
 	-o-transition: background 0.2s 0.02s ease;
 	-webkit-transition: background 0.2s 0.02s ease;
@@ -60,7 +60,7 @@ aside {
 
 .news_title:active 
 {
-    background: #FFDEDE;
+    background: #E6E6E6;
 }
 
 .news_info
