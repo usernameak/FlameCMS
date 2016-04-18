@@ -34,7 +34,7 @@
 			$author[$i] = "Neongames";
 			
 			$edd_tamp = $sm_read;
-			$edd_tamp = str_replace("[_url]", $page_url, $edd_tamp);
+			$edd_tamp = str_replace("[_url]", $site_url, $edd_tamp);
 			$edd_tamp = str_replace("[_text]", $txt[$i], $edd_tamp);
 			$edd_tamp = str_replace("[_title]", $title[$i], $edd_tamp);
 			$edd_tamp = str_replace("[_cat]", $cats[$i], $edd_tamp);

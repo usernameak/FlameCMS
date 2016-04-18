@@ -1,10 +1,17 @@
 <?
+	function get_site_url() {
+		return sprintf(
+			"%s://%s",
+			isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+			$_SERVER['SERVER_NAME']
+		)
+	}
 	$jsonconfig = json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"]."/config.json"), true);
 	//////////////////////////////////////////////////////////////////////////////////
 	include("templates/templates.php");
 	$template = $jsonconfig["template"];
 	$page_title = $jsonconfig["sitename"];
-	$page_url = $jsconfig["siteurl"];
+	$site_url = get_site_url();
 	//////////////////////////////////////////////////////////////////////////////////
 	$engine_version = "0.1";
 	//////////////////////////////////////////////////////////////////////////////////
