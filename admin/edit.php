@@ -23,20 +23,20 @@
 				<fieldset>
 
 				<!-- Form Name -->
-				<legend align="center">Настройки сайта</legend>
+				<legend align="center">РќР°СЃС‚СЂРѕР№РєРё СЃР°Р№С‚Р°</legend>
 
 				<!-- Text input-->
 				<div class="form-group">
-				  <label class="col-md-4 control-label" for="sitename">Имя сайта.</label>  
+				  <label class="col-md-4 control-label" for="sitename">РРјСЏ СЃР°Р№С‚Р°.</label>  
 				  <div class="col-md-4">
 				  <input id="sitename" name="sitename" type="text" placeholder="Flame CMS" class="form-control input-md">
-				  <span class="help-block">Название вашего сайта. Несколько слов</span>  
+				  <span class="help-block">РќР°Р·РІР°РЅРёРµ РІР°С€РµРіРѕ СЃР°Р№С‚Р°. РќРµСЃРєРѕР»СЊРєРѕ СЃР»РѕРІ</span>  
 				  </div>
 				</div>
 
 				<!-- Text input-->
 				<div class="form-group">
-				  <label class="col-md-4 control-label" for="siteurl">URL-Адрес сайта</label>  
+				  <label class="col-md-4 control-label" for="siteurl">URL-РђРґСЂРµСЃ СЃР°Р№С‚Р°</label>  
 				  <div class="col-md-4">
 				  <input id="siteurl" name="siteurl" type="text" placeholder="" class="form-control input-md">
 				  <span class="help-block">http://flamegames.ru/</span>  
@@ -45,7 +45,7 @@
 
 				<!-- Select Basic -->
 				<div class="form-group">
-					<label class="col-md-4 control-label" for="template">Выберите шаблон сайта:</label>
+					<label class="col-md-4 control-label" for="template">Р’С‹Р±РµСЂРёС‚Рµ С€Р°Р±Р»РѕРЅ СЃР°Р№С‚Р°:</label>
 					<div class="col-md-4">
 						<select id="template" name="template" class="form-control">
 							<?=$templats?>
@@ -57,7 +57,7 @@
 				<div class="form-group">
 				  <label class="col-md-4 control-label" for="submit"></label>
 				  <div class="col-md-4">
-					<button id="submit" name="submit" class="btn btn-success">Сохранить</button>
+					<button id="submit" name="submit" class="btn btn-success">РЎРѕС…СЂР°РЅРёС‚СЊ</button>
 				  </div>
 				</div>
 
