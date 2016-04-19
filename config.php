@@ -1,11 +1,9 @@
 <?
 	$jsonconfig = json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"]."/config.json"), true);
 	//////////////////////////////////////////////////////////////////////////////////
-	include("/modules/templates.php");
 	
 	$template = $jsonconfig["template"];
 	$t_count = count($templates);
-	$template = $templates($template[0]);
 	
 	$page_title = $jsonconfig["sitename"];
 	$site_url = sprintf(
