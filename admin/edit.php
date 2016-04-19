@@ -11,13 +11,13 @@
 		return $templats;
 	}
 	$templats = getTemplatesList();
-?>
-<html>
+?><html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title></title>
 		<link rel="stylesheet" href="/admin/css/edit.css">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<meta charset="utf-8">
+		
 	</head>
 	<body>
 			<form class="form-horizontal" width="500px" style="margin 0px auto;">
