@@ -3,7 +3,9 @@
 	//////////////////////////////////////////////////////////////////////////////////
 	
 	$template = $jsonconfig["template"];
-	$t_count = count($templates);
+	$templates = array_map(basename, glob($_SERVER["DOCUMENT_ROOT"]."/templates/*", GLOB_ONLYDIR));
+
+	//////////////////////////////////////////////////////////////////////////////////
 	
 	$page_title = $jsonconfig["sitename"];
 	$site_url = sprintf(

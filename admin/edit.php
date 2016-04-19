@@ -1,7 +1,7 @@
 <?
 	function getTemplatesList()
 	{
-		include_once("modules/templates.php");
+		include_once($_SERVER["DOCUMENT_ROOT"] . "/config.php");
 		
 		for($i = 0; $i < count($templates); $i ++)
 		{
