@@ -7,13 +7,10 @@
 	include("modules/menu.php");
 	$menu = menu();
 	
-	include("modules/gallery.php");
-	$gallery = gal();
-	
 	if(!empty($_GET['page']))
 	{
 		$page_content = $gallery;
-		include("templates/$template/page.html");
+		include("templates/$template/main.html");
 	}
 	
 	if(!empty($_GET['tpage']))
@@ -25,13 +22,12 @@
 		$page_title = $page[0];
 		$page_content = $page[1];
 		
-
-		include("templates/$template/page.html");
+		include("templates/$template/main.html");
 	}
 	else
 	{
-	$page_title;
-	$page_content = $news;
-	include("templates/$template/page.html");
+		$page_title;
+		$page_content = $news;
+		include("templates/$template/main.html");
 	}
 ?>

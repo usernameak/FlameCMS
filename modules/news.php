@@ -17,10 +17,12 @@
 				$txt[$i] .= $file_f[$j];	
 			}
 			
-
+			//BBCODES
 			$txt[$i] = bbcodd($txt[$i]);
+			//!BBCODES
 			
-			$bc = "Главная > " . $file_f[3];
+			//BREAD
+			$bc = "$page_title > " . $file_f[3];
 			$sub = $file_f[4];
 			$subs = $file_f[5];
 			if(!preg_match("/nul/", $sub)) {
@@ -30,6 +32,7 @@
 				$bc .= " > " . $subs;
 			}
 			$cats[$i] = $bc;
+			//!BREAD
 			
 			$author[$i] = "Neongames";
 			
