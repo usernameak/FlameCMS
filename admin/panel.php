@@ -12,7 +12,7 @@
 </head>
 <body>
 	<aside>
-		<div class="ap-menuitem" data-panefile="/admin/panes/settings.php">Настройки</div>
+		<div class="ap-menuitem" data-panefile="/admin/panes/settings.php">Общие настройки</div>
 	</aside>
 	<main class="indeterminate-main">
 		Select a panel from the left menu
