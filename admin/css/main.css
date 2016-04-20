@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,greek,greek-ext,cyrillic-ext,vietnamese,latin-ext,cyrillic);
+* {
+	font-family: "Open Sans", sans-serif;
+}
+body {
+	display: flex;
+	margin: 0;
+	background: #F2F1EF;
+	min-height: 100vh;
+}
+aside {
+	width: 15%;
+	background: #1d1d1d;
+	color: #F2F1EF;
+	
+}
+.ap-menuitem {
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.ap-menuitem:hover {
+	background: #353534;
+}
+main {
+	width: 85%;
+}
+.indeterminate-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #bdc3c7;
+	font-size: 24px;
+}
+.error-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #e74c3c;
+	font-size: 24px;
+}
+#settings-list {
+	display: flex;
+	flex-direction: column;
+}
+#settings-item {
+	display:flex;
+	height: 50px;
+	border-bottom: 1px solid #bdc3c7;
+}
+#settings-item label {
+	flex-basis: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid #bdc3c7;
+}
+#settings-item input {
+	flex-basis: 80%;
+	padding: 10px;
+	/* reset default css */
+	background-color: transparent;
+    border: 0px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
