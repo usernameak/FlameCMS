@@ -15,7 +15,7 @@
 		<div class="ap-menuitem" data-panefile="/admin/panes/settings.php">Общие настройки</div>
 	</aside>
 	<main class="indeterminate-main">
-		Select a panel from the left menu
+		Выберите раздел из левого меню
 	</main>
 	<script type="text/javascript" src="/admin/main.js"></script>
 </body>
