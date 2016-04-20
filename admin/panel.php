@@ -6,17 +6,17 @@
 <html>
 <head>
 	<title>Admin panel - Flame CMS</title>
-	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+	<!--<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />-->
+	<link rel="stylesheet" href="/admin/css/main.css" type="text/css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
 </head>
 <body>
-	<div class="buttons" style="color: #000;">
-		<div class="str">
-		<hr>
-			<div class="button"><a href="/admin/edit.php?req=main"><img src="/admin/img/mained.png" width="48px" height="48px" alt="Main"/></a><br><p>Основные</p></div>
-			<div class="button"><a href="/admin/edit.php?req=news"><img src="/admin/img/edit.png" width="48px" height="48px" alt="Main"/></a><br><p>Статьи</p></div>
-		<hr>
-		</div>
-		<div class="button"><a href="/admin/check.php?quit=1"><img src="/admin/img/exit.png" width="48px" height="48px" alt="Logout"/>Log Out</a></div>
-	</div>
+	<aside>
+		<div class="ap-menuitem" data-panefile="/admin/panes/settings.php">Настройки</div>
+	</aside>
+	<main class="indeterminate-main">
+		Select a panel from the left menu
+	</main>
+	<script type="text/javascript" src="/admin/main.js"></script>
 </body>
 </html>
