@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script src="templates/f_white/js/stickyMojo.js"></script>
 		<link rel="stylesheet" href="templates/f_white/css/style.css">
+		<script type="text/javascript" src="templates/f_white/js/jquery.js"></script>
+		<script type="text/javascript" src="templates/f_white/js/sliding_effect.js"></script>
 	</head>
 	<body>
 		<div id="wrapper">
 		  <div id="sidebar">
-			<p>sidebar</p>
+			<div id="navigation-block">
+				<ul id="sliding-navigation">
+					<li class="sliding-element"><h3>Menu</h3></li>
+					<li class="sliding-element"><a href="#">Link 1</a></li>
+				</ul>
+			</div>
 		  </div>
 		 
 		  <div id="main">
@@ -20,11 +25,5 @@
 		  </div>
 		 
 		</div>
-		
-		<script>
-		  $(document).ready(function(){
-			$('#sidebar').stickyMojo({footerID: '#footer', contentID: '#main'});
-		  });
-		</script>
 	</body>
 </html>
