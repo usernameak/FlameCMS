@@ -19,7 +19,7 @@ body
 {
 	width: 160px;
 	background-color: #fff;
-	border: 2px solid #eb0c0c;
+/*	border: 2px solid #eb0c0c; */
 	min-height: 200px;
 	
 	margin: 10px 0 15px 0; /*controls the cutoff of the top and bottom limitations*/
@@ -29,11 +29,9 @@ body
 	padding: 15px 10px;
 	float: left; /* float right for a right aligned sidebar */
   
-	-webkit-box-shadow:inset -7px 0 5px -5px #000000;
-	box-shadow:inset -7px 0 5px -5px #000000;
+	box-shadow:inset -5px 0 5px -5px #000000;
 	
-	-webkit-border-radius: 15px 0px 0px 15px;
-	border-radius: 15px 0px 0px 15px;
+/*	border-radius: 15px 0px 0px 15px; */
 }
 #footer 
 {
@@ -85,6 +83,7 @@ ul#sliding-navigation li.sliding-element h3
 	color: #fff;
 	background: #eb0c0c;
 	font-weight: normal;
+	cursor: pointer;
 }
 
 ul#sliding-navigation li.sliding-element a

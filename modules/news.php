@@ -9,10 +9,14 @@
 			$file_f = explode("\n", file_get_contents("resourses/news/".$i.".txt"));
 			$title[$i] = $file_f[0];
 			$date_b[$i] = $file_f[1];
-			$desc[$i] = $file_f[2];
+			
+			$img = $file_f[4];
+			if(preg_match("/nul/", $img))
+				$img = "templates/$template/img/noimage.png";
+			$article_photo[$i] = "<img src=\"$img\" width=\"175px\" height=\"100px\"/>";
 			
 			
-			for($j = 6; $j < count($file_f); $j ++)
+			for($j = 5; $j < count($file_f); $j ++)
 			{
 				$txt[$i] .= $file_f[$j];	
 			}
@@ -22,28 +26,24 @@
 			//!BBCODES
 			
 			//BREAD
-			$bc = "$page_title > " . $file_f[3];
-			$sub = $file_f[4];
-			$subs = $file_f[5];
-			if(!preg_match("/nul/", $sub)) {
+			$bc = "$page_title > " . $file_f[2];
+			$sub = $file_f[3];
+			
+			if(!preg_match("/nul/", $sub))
 				$bc .= " > " . $sub;
-			}
-			if(!preg_match("/nul/", $subs)){
-				$bc .= " > " . $subs;
-			}
+
 			$cats[$i] = $bc;
 			//!BREAD
 			
 			$author[$i] = "Neongames";
 			
 			$edd_tamp = $sm_read;
-			$edd_tamp = str_replace("[_url]", $site_url, $edd_tamp);
-			$edd_tamp = str_replace("[_text]", $txt[$i], $edd_tamp);
-			$edd_tamp = str_replace("[_title]", $title[$i], $edd_tamp);
-			$edd_tamp = str_replace("[_cat]", $cats[$i], $edd_tamp);
-			$edd_tamp = str_replace("[_desc]", $desc[$i], $edd_tamp);
-			$edd_tamp = str_replace("[_author]", $author[$i], $edd_tamp);
-			$edd_tamp = str_replace("[_date_b]", $date_b[$i], $edd_tamp);
+			$edd_tamp = str_replace("{content}", $txt[$i], $edd_tamp);
+			$edd_tamp = str_replace("{img}", $article_photo[$i], $edd_tamp);
+			$edd_tamp = str_replace("{title}", $title[$i], $edd_tamp);
+			$edd_tamp = str_replace("{cats}", $cats[$i], $edd_tamp);
+			$edd_tamp = str_replace("{author}", $author[$i], $edd_tamp);
+			$edd_tamp = str_replace("{date}", $date_b[$i], $edd_tamp);
 
 			$news .= $edd_tamp;
 		}

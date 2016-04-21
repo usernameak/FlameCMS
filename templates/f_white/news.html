@@ -1,21 +1,20 @@
-<div class="news_item">
-		<img src="/templates/f_default/img/article.svg" align="left" />
-		[_title]
+<table width="100%" style="padding-top:8px;">
+    <tr>
+		<td style="margin-right: 100px; margin-top: 20px;">{img}</td>
 		
-		<div class="news_cat">
-			<img />[_cat]
-		</div>
-	<div class="news_text">
-	<hr align="center" width="100%" color="#000"/>	
-	[_text] 
-	<hr align="center" width="100%" color="#000"/></div>
-	
-	<div class="news_info">
-		<img src="/templates/f_default/img/author.svg" align="left"> Автор: 
-		<img src="/templates/f_default/img/time.svg" style="padding:0px;"> [_date_b]
-	</div>
-	
-	<div class="news_tags">
-		<img />[_desc]
-	</div>
-</div>
+		<td valign="top">
+			<p align="left" style="margin-left:50px;">
+				<span style="font-size: 13px; color: #1A1A1A">{cats}</span>
+				<br>
+				<span style="font-size: 32px; color: #eb0c0c">{title}</span>
+			</p>
+			<hr>
+			{content}
+			<hr>
+			<p style="margin-left: 50px; color: #eb0c0c; font-size: 14px;">
+				<span style="margin-right: 50px;">{date}</span>
+				<span>Автор: {author}</span>
+			</p>
+		</td>
+	</tr>
+</table>
