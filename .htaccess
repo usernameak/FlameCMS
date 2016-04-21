@@ -1,4 +1,10 @@
 AddDefaultCharset utf-8
+
 Options +FollowSymLinks
 RewriteEngine on
 RewriteRule ^page/(\w*) /index.php?tpage=$1
+
+<Files "config.json">
+Order Allow,Deny
+Deny from all
+</Files>

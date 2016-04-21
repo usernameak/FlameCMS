@@ -1,12 +1,22 @@
 <?
 	$jsonconfig = json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"]."/config.json"), true);
+
 	//////////////////////////////////////////////////////////////////////////////////
+
+	$db_name = $jsonconfig["db"]["name"];
+	$db_host = $jsonconfig["db"]["host"];
+	$db_user = $jsonconfig["db"]["user"];
+	$db_pass = $jsonconfig["db"]["pass"];
+	$db = mysql_connect($db_host, $db_user, $db_pass);
 	
+	//////////////////////////////////////////////////////////////////////////////////
+
 	$template = $jsonconfig["template"];
 	$templates = array_map(basename, glob($_SERVER["DOCUMENT_ROOT"]."/templates/*", GLOB_ONLYDIR));
 
 	//////////////////////////////////////////////////////////////////////////////////
 	
+	$site_name = $jsonconfig["sitename"];
 	$page_title = $jsonconfig["sitename"];
 	$site_url = sprintf
 	(

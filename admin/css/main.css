@@ -57,9 +57,10 @@ main {
 	justify-content: center;
 	border-right: 1px solid #bdc3c7;
 }
-#settings-item input {
+#settings-item > input {
 	flex-basis: 80%;
 	padding: 10px;
+	box-sizing: border-box;
 	/* reset default css */
 	background-color: transparent;
     border: 0px;
@@ -67,4 +68,23 @@ main {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+#settings-item select {
+	padding: 10px;
+	box-sizing: border-box;
+	/* reset default css */
+	appearance: none;
+	-moz-appearance: none;
+	background-color: transparent;
+    border: 0px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.select-container select {
+	width: 100%;
+}
+#settings-item > .select-container {
+	flex-basis: 80%;
 }

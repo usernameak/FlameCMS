@@ -1,4 +1,10 @@
 {
 	"template": "f_white",
-	"sitename": "Flame Games"
+	"sitename": "Flame Games",
+	"db": {
+		"name": "u494016662_flame",
+		"user": "u494016662_flame",
+		"pass": "1234567890",
+		"host": "mysql.hostinger.ru"
+	}
 }
