@@ -8,6 +8,7 @@
 	$db_user = $jsonconfig["db"]["user"];
 	$db_pass = $jsonconfig["db"]["pass"];
 	$db = mysql_connect($db_host, $db_user, $db_pass);
+	mysql_select_db($db_name);
 	
 	//////////////////////////////////////////////////////////////////////////////////
 

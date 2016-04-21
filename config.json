@@ -2,9 +2,9 @@
 	"template": "f_white",
 	"sitename": "Flame Games",
 	"db": {
-		"name": "u494016662_flame",
-		"user": "u494016662_flame",
+		"name": "flamecms",
+		"user": "usernameak",
 		"pass": "1234567890",
-		"host": "mysql.hostinger.ru"
+		"host": "uukk25ef2a4d.usernameak3.koding.io"
 	}
 }
