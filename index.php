@@ -1,8 +1,19 @@
 ﻿<?
 	include("config.php");
 	
-	include("modules/news.php");
-	$news = index_page();
+	if($_GET['blog'])$blog = $_GET['blog'];
+	
+	if(!$blog)
+	{
+		include("modules/news.php");
+		$news = index_page();
+	}
+	
+	if($blog)
+	{
+		include("modules/blog.php");
+		$txt = blog($blog);
+	}
 	
 	include("modules/menu.php");
 	$menu = menu();

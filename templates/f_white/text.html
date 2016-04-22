@@ -1,8 +1,26 @@
-<div class="news_item">
-    <p class="news_title">[_title]</p>
-    <p class="news_text">[_text]</p>
-    <p align="right"><a href="javascript:history.go(-1);">Назад</a></p>
-</div>
-<div class="div_footer">
-    Автор: [_author] | [_date_b]
-</div>
+﻿<table width="100%" style="padding-top:8px;">
+    <tr>
+		<td align="left" width="250px" style="padding-top: 0px; padding-right:0px; margin-top: 0px">{img}</td>
+		
+		<td valign="top">
+			<p>
+				<span style="font-size: 13px; color: #1A1A1A">{cats}</span>
+				<br>
+				
+				<span>
+					<a href="javascript:history.go(-1);" style="font-size: 25px; color: #fff; background: #eb0c0c; padding: 3px; padding-right: 50%; text-decoration: none;">{title}</a>
+				</span>
+				
+				<hr>
+				{content}
+				<hr>
+			
+			</p>
+			
+			<p style="margin-left: 50px; color: #eb0c0c; font-size: 14px;">
+				<span style="margin-right: 50px;">{date}</span>
+				<span>Автор: {author}</span>
+			</p>
+		</td>
+	</tr>
+</table>

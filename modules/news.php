@@ -4,19 +4,15 @@
 		include("config.php");
 		$sm_read = file_get_contents("templates/$template/news.html");
 		$data = mysql_query("SELECT * FROM `blog`");
+		
 		for($i = 1; ($sql_f = mysql_fetch_assoc($data)) != false; $i++) {
 			$title = $sql_f["title"];
 			$date_b = $sql_f["date"];
-
-			if(($img = $sql_f["image"]) == NULL) {
-				$img = "templates/$template/img/noimage.png";
-			}
-			$article_photo = "<img src=\"$img\" width=\"175px\" height=\"100px\"/>";
 			
-			$txt = $sql_f["content"];	
+			$txt = explode("[end]",$sql_f["content"]);
 			
 			//BBCODES
-			$txt = bbcodd($txt);
+			$txt[0] = bbcodd($txt[0]);
 			//!BBCODES
 			
 			//BREAD
@@ -29,10 +25,18 @@
 			$cats = $bc;
 			//!BREAD
 			
+			//IMAGE
+			if(($img = $sql_f["image"]) == NULL) {
+				$img = "templates/$template/img/noimage.png";
+			}
+			$article_photo = "<img src=\"$img\" width=\"250px\" height=\"150px\" />";
+			//!IMAGE
+			
 			$author = $sql_f["author"];
 			
 			$edd_tamp = $sm_read;
-			$edd_tamp = str_replace("{content}", $txt, $edd_tamp);
+			$edd_tamp = str_replace("{id}", $sql_f["id"], $edd_tamp);
+			$edd_tamp = str_replace("{content}", $txt[0], $edd_tamp);
 			$edd_tamp = str_replace("{img}", $article_photo, $edd_tamp);
 			$edd_tamp = str_replace("{title}", $title, $edd_tamp);
 			$edd_tamp = str_replace("{cats}", $cats, $edd_tamp);

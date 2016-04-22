@@ -1,16 +1,22 @@
-<table width="100%" style="padding-top:8px;">
+﻿<table width="100%" style="padding-top:8px;">
     <tr>
-		<td style="margin-right: 100px; margin-top: 20px;">{img}</td>
+		<td align="left" width="250px" style="padding-top: 0px; padding-right:0px; margin-top: 0px">{img}</td>
 		
 		<td valign="top">
-			<p align="left" style="margin-left:50px;">
+			<p>
 				<span style="font-size: 13px; color: #1A1A1A">{cats}</span>
 				<br>
-				<span style="font-size: 32px; color: #eb0c0c">{title}</span>
+				
+				<span>
+					<a href="?blog={id}" style="font-size: 25px; color: #fff; background: #eb0c0c; padding: 3px; padding-right: 50%; text-decoration: none;">{title}</a>
+				</span>
+				
+				<hr>
+				{content}
+				<hr>
+			
 			</p>
-			<hr>
-			{content}
-			<hr>
+			
 			<p style="margin-left: 50px; color: #eb0c0c; font-size: 14px;">
 				<span style="margin-right: 50px;">{date}</span>
 				<span>Автор: {author}</span>
