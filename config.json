@@ -1,6 +1,4 @@
 {
-	"template": "f_white",
-	"sitename": "Flame Games",
 	"db": {
 		"name": "flamecms",
 		"user": "usernameak",
