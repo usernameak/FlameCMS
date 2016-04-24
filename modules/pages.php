@@ -3,19 +3,16 @@
 	
 	function gettpage($id)
 	{
-		include("config.php");
+		global $template;
 		
 		if(isset($_GET['tpage']))
 		{
 			$tpage = file("resourses/pages/$id.txt");
 		}
 		
-		$txt = $tpage[1];
-		
-		for($j = 2; $j < count($tpage); $j ++)
-		{
-			$txt .= "$tpage[$j] ";
-		}
+		$title = array_shift($tpage);
+
+		$txt = implode(" ", $tpage);
 		
 		$txt = bbcode1($txt);
 		
@@ -28,7 +25,7 @@
 	
 	function bbcode1($text) 
 	{
-		include("config.php");
+		global $str_search, $str_replace;
 		$search = $str_search;
 		$replace = $str_replace;
 		return preg_replace($str_search, $str_replace, $text);
@@ -36,9 +33,9 @@
 	
 	function getpage($title, $id, $menu, $content)
 	{
+		global $template;
 		if(isset($_GET['page']))
 		{
-			include("config.php");
 			include("templates/$template/page.html");
 		}
 	}

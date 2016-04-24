@@ -1,7 +1,7 @@
 <?
 	function blog($blog)
 	{
-		include("config.php");
+		global $template;
 		$sm_read = file_get_contents("templates/$template/text.html");
 		
 		$data = mysql_query("SELECT * FROM `blog`");
@@ -47,6 +47,7 @@
 	
 	function bbcodd($text) 
 	{
+			global $str_search, $str_replace;
 			include("config.php");
 			$search = $str_search;
 			$replace = $str_replace;

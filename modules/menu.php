@@ -1,6 +1,7 @@
 <?
 function menu()
 {	
+	global $template;
 	$file_array =  file("resourses/menu.txt");
 	
 	for($i = 0; $i < count($file_array); $i ++)
@@ -10,7 +11,6 @@ function menu()
 		$link[$i] = $kek[1];
 	}
 	
-	include("config.php");
 	$sm_read = file_get_contents("templates/$template/menu.html");
 	
 	for($i = 0; isset($href[$i]); $i++)
