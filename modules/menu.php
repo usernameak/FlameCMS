@@ -2,13 +2,11 @@
 function menu()
 {	
 	global $template;
-	$file_array =  file("resourses/menu.txt");
+	$sql_array = mysql_query("SELECT * FROM `menu`");
 	
-	for($i = 0; $i < count($file_array); $i ++)
-	{
-		$kek = explode("|", $file_array[$i]);
-		$href[$i] = $kek[0];
-		$link[$i] = $kek[1];
+	for($i = 0; $kek = mysql_fetch_assoc($sql_array); $i++) {
+		$href[$i] = $kek["url"];
+		$link[$i] = $kek["text"];
 	}
 	
 	$sm_read = file_get_contents("templates/$template/menu.html");

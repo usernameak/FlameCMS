@@ -1,4 +1,5 @@
 <?
+die();
 	function getTemplatesList()
 	{
 		include_once($_SERVER["DOCUMENT_ROOT"] . "/config.php");

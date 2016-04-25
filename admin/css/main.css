@@ -88,3 +88,34 @@ main {
 #settings-item > .select-container {
 	flex-basis: 80%;
 }
+#save-button {
+	background: #3498db;
+	width: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #F2F1EF;
+	padding: 15px;
+	cursor: pointer;
+}
+#save-button:hover {
+	background: #2980b9;
+}
+#save-button-cont {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#save-state {
+	margin-top: 15px;
+}
+.save-state-wait {
+	color: #bdc3c7;
+}
+.save-state-ok {
+	color: #2ecc71;
+}
+.save-state-error {
+	color: #e74c3c;
+}

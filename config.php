@@ -19,7 +19,7 @@
 	//////////////////////////////////////////////////////////////////////////////////
 
 	$template_data = mysql_fetch_assoc(mysql_query("SELECT * FROM `settings` WHERE `name` = 'template'"));
-	$template = $template_data["value"];
+	$template = trim($template_data["value"]);
 	$templates = array_map(basename, glob($_SERVER["DOCUMENT_ROOT"]."/templates/*", GLOB_ONLYDIR));
 
 	//////////////////////////////////////////////////////////////////////////////////
