@@ -16,7 +16,16 @@
 </head>
 <body>
 	<aside>
-		<div class="ap-menuitem" data-panefile="/admin/panes/settings.php">Общие настройки</div>
+		<div id="ap-menu">
+			<div class="ap-menuitem" data-panefile="/admin/panes/settings.php">Общие настройки</div>
+		</div>
+		<div id="ap-optbar">
+			<a href="/admin/check.php?quit=1">
+				<svg height="40" width="40" viewbox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" id="logout-btn" preserveAspectRatio="xMidYMid slice">
+					<path d="M640 768H384V192L128 64h512v192h64V0H0v832l384 192V832h320V512h-64V768zM1024 384L768 192v128H512v128h256v128L1024 384z" fill="#F2F1EF"></path>
+				</svg>
+			</a>
+		</div>
 	</aside>
 	<main class="indeterminate-main">
 		Выберите раздел из левого меню
