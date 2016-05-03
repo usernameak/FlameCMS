@@ -8,6 +8,7 @@
 	$db_host = $jsonconfig["db"]["host"];
 	$db_user = $jsonconfig["db"]["user"];
 	$db_pass = $jsonconfig["db"]["pass"];
+	
 	$db = @mysql_connect($db_host, $db_user, $db_pass);
 	if(!$db) {
 		include($_SERVER['DOCUMENT_ROOT'] . "/mysqlerror.php");
