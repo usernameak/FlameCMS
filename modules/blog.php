@@ -51,14 +51,11 @@
 		$sm_read = file_get_contents("templates/$template/news.html");
 		
 		$res = mysql_query("SELECT * FROM `blog`");
-		$row = mysql_fetch_array($res);
 		
-		do {
+		while($row = mysql_fetch_assoc($res)) {
 			$edd_tamp = $sm_read;
-			
 			$edd_tamp = str_replace("");
 		}
-		while($row = mysql_fetch_array($res))
 		
 	}
 	
